@@ -1,0 +1,15 @@
+<li *ngIf="menuItem.children" [title]="menuItem.title" class="nav-item nav-dropdown" routerlinkActive="open">
+    <a class="nav-link nav-dropdown-toggle" href="#">
+        <i *ngIf="menuItem.icon" class="{{menuItem.icon}}"></i>
+        <div class="menu-title">{{menuItem.title}}</div>
+    </a>
+    <ul class="nav-dropdown-items">
+        <menu-item [menuItem]="subItem" *ngFor="let subItem of menuItem.children"></menu-item>
+    </ul>
+</li>
+<li *ngIf="!menuItem.children" [title]="menuItem.title" class="nav-item">
+    <a class="nav-link" routerLinkActive="active" [routerLink]="menuItem.route.paths">
+        <i *ngIf="menuItem.icon" class="{{menuItem.icon}}"></i>
+        <div class="menu-title">{{menuItem.title}}</div>
+    </a>
+</li>

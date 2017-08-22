@@ -1,0 +1,13 @@
+<div class="sidebar">
+    <nav class="sidebar-nav">
+      <ul class="nav">
+        <li class="nav-title toggler">
+          <span>系统导航</span>
+          <!--<a class="navbar-toggler sidebar-toggler" href="#">&#9776;</a>-->
+          <!--<span class="sidebar-toggler pull-right"><i class="fa fa-bars"></i><i class="fa fa-caret-left"></i></span>-->
+          <span class="sidebar-toggler">&#9776;</span>
+        </li>
+        <menu-item [menuItem]="item" *ngFor="let item of menuItems"></menu-item>
+      </ul>
+    </nav>
+  </div>
